@@ -1,0 +1,58 @@
+<main class="home-main--container">
+  <aside>
+    <app-side-navbar></app-side-navbar>
+  </aside>
+  <article class="home-content-container--main">
+    <header class="home-content-container--main-header">
+      <section class="main-content-header--items-title">
+        <h2>Books</h2>
+      </section>
+      <section class="main-content-header--items-button">
+        <button>Create New Book</button>
+      </section>
+    </header>
+
+    <main>
+      <section class="home-main--filter-container">
+        <div class="home-main--filter-container-search-icon">
+          <i class="fas fa-search"></i>
+        </div>
+
+        <input
+          type="text"
+          class="home-main--filter-container-input"
+          placeholder="Search"
+          (input)="filterBookDetails($event)"
+        />
+      </section>
+      <section class="home-main--card-section">
+        <h2 class="home-main--card-section--header-title">All Books</h2>
+        <div class="main-content-api-error" *ngIf="errorMessage">
+          <span class="main-content-api-error-icon"
+            ><i class="fas fa-exclamation-triangle fa-lg"></i></span
+          >{{ errorMessage }}
+        </div>
+        <div class="main-content-no-records" *ngIf="!bookArr.length">
+          {{ noRecords }}
+        </div>
+        <section class="home-main--cards-section">
+          <article
+            class="home-main--cards"
+            *ngFor="let book of bookArr; trackBy: trackByBookId"
+          >
+            <span class="home-main--cards-data-title">{{ book.title }}</span>
+            <span class="home-main--cards-data"
+              >Authers: {{ book.authors }}</span
+            >
+            <span class="home-main--cards-data"
+              >Publisher: {{ book.publisher }}</span
+            >
+            <span class="home-main--cards-data"
+              >Published Date: {{ book.publishedDate }}</span
+            >
+          </article>
+        </section>
+      </section>
+    </main>
+  </article>
+</main>

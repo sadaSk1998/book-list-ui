@@ -1,0 +1,89 @@
+.home-main--container {
+  display: flex;
+  .home-content-container--main {
+    padding: 0px 30px;
+    width: 100vw;
+    &-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .main-content-header--items {
+        &-title {
+          font-size: 24px;
+        }
+        &-button {
+          button {
+            height: 40px;
+            width: 150px;
+            background-color: #412bb1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.home-main--filter-container {
+  &-input {
+    border: none;
+    border-bottom: 1.5px solid #dbd1c3;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    width: 50vw;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-search-icon {
+    position: relative;
+    top: 20px;
+    color: #b7ad9f;
+  }
+}
+.home-main--card-section {
+  margin-top: 30px;
+  & --header-title {
+    font-weight: 450;
+    color: #4c556b;
+  }
+}
+.home-main--cards-section {
+  display: flex;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .home-main {
+    &--cards {
+      display: flex;
+      flex-direction: column;
+      border-left: 5px solid #ffad2a;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 1px 3px #e1d7c8;
+      width: 44%;
+      row-gap: 5px;
+    }
+  }
+}
+
+.main-content-api-error {
+  padding: 20px;
+  background-color: #fff2f4;
+  color: #a00;
+  margin-bottom: 20px;
+  border-left: 5px solid #a00;
+  &-icon {
+    padding-right: 10px;
+  }
+}
+.home-main--cards-data {
+  font-size: 14px;
+  &-title {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}

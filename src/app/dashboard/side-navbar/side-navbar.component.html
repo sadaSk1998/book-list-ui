@@ -1,0 +1,36 @@
+<article
+  class="side-navbar--main"
+  [ngClass]="{ 'side-navbar-item-collapse': collapsed }"
+>
+  <section
+    class="side-navbar--main-nav-items"
+    *ngFor="let nav of navData"
+    (click)="onMenuClick(nav)"
+    [ngClass]="{ 'side-navbar-item-active': activeTab === nav.id }"
+  >
+    <div class="side-navbar--main-nav-items-icon">
+      <i class="{{ nav.iconClass }} fa-lg"></i>
+    </div>
+    <div class="side-navbar--main-nav-items-title">{{ nav.title }}</div>
+  </section>
+  <!-- <section
+    class="side-navbar--main-nav-items"
+    [ngClass]="{ 'side-navbar-item-active': activeTab === 2 }"
+    (click)="onMenuClick('content')"
+  >
+    <div class="side-navbar--main-nav-items-icon">
+      <i class="fas fa-newspaper fa-lg"></i>
+    </div>
+    <div class="side-navbar--main-nav-items-title">Content Management</div>
+  </section>
+  <section
+    class="side-navbar--main-nav-items"
+    [ngClass]="{ 'side-navbar-item-active': activeTab === 3 }"
+    (click)="onMenuClick('courses')"
+  >
+    <div class="side-navbar--main-nav-items-icon">
+      <i class="fas fa-book fa-lg"></i>
+    </div>
+    <div class="side-navbar--main-nav-items-title">Courses</div>
+  </section> -->
+</article>

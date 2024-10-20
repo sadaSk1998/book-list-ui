@@ -1,0 +1,42 @@
+.side-navbar--main {
+  width: 275px;
+  height: 100%;
+  border-right: 3px solid #d8d8d8;
+
+  &-nav-items {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 15px;
+    cursor: pointer;
+    &-title {
+      margin-left: 20px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: uppercase;
+    }
+    &-icon {
+      width: 25px;
+      color: #9f988d;
+    }
+    &:hover {
+      background-color: #d8d8d8;
+      border-radius: 7px;
+    }
+  }
+}
+
+.side-navbar-item-active.side-navbar--main-nav-items {
+  background-color: #d8d8d8;
+  border-radius: 7px;
+}
+
+.side-navbar-item-collapse.side-navbar--main {
+  width: 50px;
+  overflow: hidden;
+  .side-navbar-item-active.side-navbar--main-nav-items {
+    background-color: revert;
+    border-radius: revert;
+  }
+}
